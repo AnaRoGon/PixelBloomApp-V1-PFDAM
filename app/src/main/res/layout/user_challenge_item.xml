@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><!--Fragmento que contiene el diseño de los elementos que se mostrarán en el RecyclerView-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="6dp"
+    android:padding="10dp"
+    app:cardBackgroundColor="@color/neutral_50"
+    app:cardCornerRadius="150dp">
+    <!--Imagen que se mostrará en el item del reto del usuario cuando esté completado-->
+    <ImageView
+        android:id="@+id/challenge_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/cd_user_challenge_board_image"
+        android:scaleType="centerCrop"
+        android:soundEffectsEnabled="true"
+        android:src="@drawable/ref03" />
+    <!--Texto que se mostrará en el item del reto del usuario cuando no esté completado-->
+    <TextView
+        android:id="@+id/challenge_description"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="@color/banana_light"
+        android:gravity="center"
+        android:text="@string/write_inspiring_description"
+        android:textColor="@color/neutral_l_d_mode"
+        android:textSize="30sp"
+        android:visibility="gone" />
+
+</androidx.cardview.widget.CardView>

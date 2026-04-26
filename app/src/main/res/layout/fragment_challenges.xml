@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neutral_200"
+    tools:context=".view.fragment.challenges.ChallengesFragment">
+
+    <!--    Contenedor para fecha y título del layout de challenges-->
+    <LinearLayout
+        android:id="@+id/challenges_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/challenges_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/default_date"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/challenges_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/inconsolata_black"
+            android:text="@string/todays_challenges"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+    <!-- Contenedor del listado de retos -->
+    <!--Se añade un padding inferior al contenedor padre para que funcione bien el scroll con la transparencia del menu inferior -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_challenges"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="16dp"
+        android:paddingBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/challenges_header"
+        app:layout_constraintTop_toBottomOf="@+id/challenges_header" />
+
+    <!-- Botón que sólo aparecerá disponible a los usuarios con rol 'admin' -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_challenge_floating_button"
+        style="@style/PixelBloomFloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:soundEffectsEnabled="true"
+        android:contentDescription="@string/cd_add_reference_fab"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/challenges_header"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

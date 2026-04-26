@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Character designs",
+    "imageRefs": [
+      "ref04",
+      "ref08",
+      "ref07"
+    ],
+    "totalReferences": 3,
+    "createdAt": "2025-11-24T11:22:00Z"
+  },
+  {
+    "title": "Isonometric",
+    "imageRefs": [
+      "ref10",
+      "ref01",
+      "ref09"
+    ],
+    "totalReferences": 4,
+    "createdAt": "2025-11-24T11:22:00Z"
+  },
+  {
+    "title": "Landscape",
+    "imageRefs": [
+      "ref14",
+      "ref16",
+      "ref15"
+    ],
+    "totalReferences": 4,
+    "createdAt": "2025-11-24T11:22:00Z"
+  },
+  {
+    "title": "References",
+    "imageRefs": [
+      "ref11",
+      "ref12",
+      "ref13"
+    ],
+    "totalReferences": 4,
+    "createdAt": "2025-11-24T11:22:00Z"
+  }
+]
+
+

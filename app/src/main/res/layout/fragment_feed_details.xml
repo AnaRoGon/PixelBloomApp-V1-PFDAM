@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?><!--El contenedor principal es un ScrollView para poder hacer scroll si el contenido es muy largo-->
+<!--Se añade un padding inferior al contenedor padre para que funcione bien el scroll -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:paddingBottom="120dp"
+    tools:context=".view.fragment.feed.FeedDetailsFragment">
+
+    <!--Contenedor único para que el NestedScrollView funcione correctamente -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+
+        <!--  Panel de opciones que aparecerá solo a los 'admin' -->
+        <LinearLayout
+            android:id="@+id/admin_options_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:divider="@drawable/spacer_35dp"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/image_card_view"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:visibility="visible">
+            <!--Botón de eliminar -->
+            <ImageButton
+                android:id="@+id/delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/transparent"
+                android:contentDescription="@string/cd_delete_reference"
+                android:soundEffectsEnabled="true"
+                android:src="@drawable/ic_delete" />
+            <!--Botón de editar-->
+            <ImageButton
+                android:id="@+id/edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/transparent"
+                android:contentDescription="@string/cd_delete_reference"
+                android:soundEffectsEnabled="true"
+                android:src="@drawable/ic_edit" />
+        </LinearLayout>
+
+        <!-- CardView que contiene la imagen de referencia -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:elevation="6dp"
+            app:cardBackgroundColor="@color/neutral_50"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/admin_options_container">
+
+            <ImageView
+                android:id="@+id/feed_details_image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ref01"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Contenedor para el icono de favoritos, el número de favoritos y el botón de guardar imagen en un board-->
+        <LinearLayout
+            android:id="@+id/icon_num_buttom_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="15dp"
+
+            app:layout_constraintEnd_toEndOf="@+id/image_card_view"
+            app:layout_constraintStart_toStartOf="@+id/image_card_view"
+            app:layout_constraintTop_toBottomOf="@+id/image_card_view">
+            <!-- Botón de favoritos -->
+            <CheckBox
+                android:id="@+id/favorite_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@drawable/sl_favorite_24dp"
+                android:buttonTint="@null"
+                android:contentDescription="@string/cd_heart_icon"
+                android:soundEffectsEnabled="true"
+                app:buttonTint="@null" />
+            <!-- Cantidad total de favoritos de esta imagen -->
+            <TextView
+                android:id="@+id/feed_details_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="5dp"
+                android:paddingEnd="20dp"
+                android:text="@string/default_likes" />
+            <!-- Botón para guardar imagen en board personal -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/feed_details_save_button"
+                style="@style/PixelBloomButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:soundEffectsEnabled="true"
+                android:text="@string/save_image" />
+        </LinearLayout>
+
+        <!--Contenedor para organizar el título y la descripción de la imagen-->
+        <LinearLayout
+            android:id="@+id/title_description_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/icon_num_buttom_container"
+            app:layout_constraintStart_toStartOf="@+id/icon_num_buttom_container"
+            app:layout_constraintTop_toBottomOf="@+id/icon_num_buttom_container">
+
+            <!--Título de la imagen-->
+            <TextView
+                android:id="@+id/feed_details_title"
+                style="@style/PixelBloomTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/default_image_title" />
+
+            <!--Autor de la imagen-->
+            <TextView
+                android:id="@+id/feed_details_author"
+                style="@style/PixelBloomSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/default_image_author" />
+
+            <!--Descripción de la imagen-->
+            <TextView
+                android:id="@+id/feed_details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="@string/default_image_desc" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

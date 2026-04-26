@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?><!--Fragmento que contiene el diseño de los elementos que se mostrarán en el RecyclerView-->
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:elevation="6dp"
+    android:padding="10dp"
+    app:cardBackgroundColor="@color/neutral_50"
+    app:cardCornerRadius="40dp">
+    <!--Contenedor para el item de referencias del feed -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/feed_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/feed_img"
+            android:scaleType="centerCrop"
+            android:soundEffectsEnabled="true"
+            android:src="@drawable/ref01" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

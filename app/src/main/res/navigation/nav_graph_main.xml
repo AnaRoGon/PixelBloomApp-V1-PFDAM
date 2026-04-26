@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_main"
+    app:startDestination="@id/feedFragment">
+    <fragment
+        android:id="@+id/feedFragment"
+        android:name="dam.pfdam.pixelbloom.view.fragment.feed.FeedFragment"
+        android:label="PIXEL BLOOM"
+        tools:layout="@layout/fragment_feed">
+        <action
+            android:id="@+id/action_feedFragment_to_feedDetailsFragment"
+            app:destination="@id/feedDetailsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedDetailsFragment"
+        android:name="dam.pfdam.pixelbloom.view.fragment.feed.FeedDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_feed_details" />
+    <fragment
+        android:id="@+id/boardsFragment"
+        android:name="dam.pfdam.pixelbloom.view.fragment.boards.BoardsFragment"
+        android:label="BOARDS"
+        tools:layout="@layout/fragment_boards">
+        <action
+            android:id="@+id/action_boardsFragment_to_challengesDetailsFragment"
+            app:destination="@id/challengesDetailsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_boardsFragment_to_boardListFragment"
+            app:destination="@id/boardListFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/challengesFragment"
+        android:name="dam.pfdam.pixelbloom.view.fragment.challenges.ChallengesFragment"
+        android:label="fragment_challenges"
+        tools:layout="@layout/fragment_challenges">
+        <action
+            android:id="@+id/action_challengesFragment_to_acceptChallengeFragment"
+            app:destination="@id/acceptChallengeFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/challengesDetailsFragment"
+        android:name="dam.pfdam.pixelbloom.view.fragment.boards.ChallengesDetailsFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_challenges_details" />
+    <fragment
+        android:id="@+id/acceptChallengeFragment"
+        android:name="dam.pfdam.pixelbloom.view.fragment.challenges.AcceptChallengeFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_accept_challenge">
+        <action
+            android:id="@+id/action_acceptChallengeFragment_to_challengesDetailsFragment"
+            app:destination="@id/challengesDetailsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/acceptChallengeFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_acceptChallengeFragment_to_transitionFragment"
+            app:destination="@id/transitionFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/boardListFragment"
+        android:name="dam.pfdam.pixelbloom.view.fragment.boards.BoardListFragment"
+        android:label="Board Name"
+        tools:layout="@layout/fragment_board_list">
+        <action
+            android:id="@+id/action_boardListFragment_to_boardDetailsImageFragment"
+            app:destination="@id/boardDetailsImageFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/boardDetailsImageFragment"
+        android:name="dam.pfdam.pixelbloom.view.fragment.boards.BoardDetailsImageFragment"
+        android:label="Details"
+        tools:layout="@layout/fragment_board_details_image" />
+
+    <fragment
+        android:id="@+id/transitionFragment"
+        android:name="dam.pfdam.pixelbloom.view.fragment.TransitionFragment"
+        android:label="fragment_transition"
+        tools:layout="@layout/fragment_transition">
+        <action
+            android:id="@+id/action_transitionFragment_to_challengesDetailsFragment"
+            app:destination="@id/challengesDetailsFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:popUpTo="@id/acceptChallengeFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

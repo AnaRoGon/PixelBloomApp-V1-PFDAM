@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Colores para el dark mode-->
+<resources>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="white_transparent_95">#F20D2D50</color>
+    <color name="neutral_transparent_80">#CC717171</color>
+    <color name="white">#FFFFFF</color>
+    <color name="neutral_50">#0d2d50</color>
+    <color name="neutral_100">#1c3e63</color>
+    <color name="neutral_200">#2c5076</color>
+    <color name="neutral_300">#45668c</color>
+    <color name="neutral_400">#617f9e</color>
+    <color name="neutral_500">#7d97b0</color>
+    <color name="neutral_600">#99b0c6</color>
+    <color name="neutral_700">#b9c9d9</color>
+    <color name="neutral_800">#d5e1ec</color>
+    <color name="neutral_900">#eef5fa</color>
+    <color name="neutral_l_d_mode">#3D3D3D</color>
+    <color name="black">#000000</color>
+
+    <!-- Colores principales -->
+    <color name="purple">#8C46CF</color>
+    <color name="purple_transparent_80">#80A07BC1</color>
+    <color name="light_purple">#2c5076</color>
+
+    <!-- Colores secundarios -->
+    <color name="inactive_blue">#668C87</color>
+    <color name="banana_light">#4D5888</color>
+    <color name="orange">#E68F40</color>
+    <color name="dirty_orange">#91513A</color>
+
+</resources>

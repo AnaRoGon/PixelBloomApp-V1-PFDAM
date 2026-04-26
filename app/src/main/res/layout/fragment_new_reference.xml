@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusableInTouchMode="true"
+    android:paddingTop="16dp">
+
+    <!-- ScrollView para poder desplazar la información si es muy larga -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <!--Contenedor del formulario -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <!-- Barra estética de arrastre -->
+            <View
+                android:id="@+id/divider"
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="16dp"
+                android:background="@color/neutral_300"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!--  Título del formulario -->
+            <TextView
+                android:id="@+id/title_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inconsolata_black"
+                android:gravity="center"
+                android:paddingTop="16dp"
+                android:text="@string/add_new_reference"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Cardview para que s emuestre la imagen que se quiere subir -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/reference_card_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:elevation="6dp"
+                app:cardBackgroundColor="@color/neutral_50"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/title_text_view"
+                app:layout_constraintStart_toStartOf="@+id/title_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/title_text_view">
+
+                <!-- Imagen del formulario -->
+                <ImageView
+                    android:id="@+id/reference_image"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/cd_reference_image_container"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/default_reference_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Botón para seleccionar una imagen -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_img"
+                style="@style/PixelBloomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/btn_orange_pixel_bloom_color"
+                android:text="@string/add_image"
+                app:layout_constraintEnd_toEndOf="@+id/reference_card_view"
+                app:layout_constraintTop_toBottomOf="@+id/reference_card_view" />
+
+            <!--Caja del textInput para el autor-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlined_text_input_author"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/author"
+                android:paddingTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/reference_card_view"
+                app:layout_constraintStart_toStartOf="@id/reference_card_view"
+                app:layout_constraintTop_toBottomOf="@+id/add_img">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:paddingStart="16dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--Caja del textInput para el title-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlined_text_input_title"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/title"
+                android:paddingTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/outlined_text_input_author"
+                app:layout_constraintStart_toStartOf="@id/outlined_text_input_author"
+                app:layout_constraintTop_toBottomOf="@+id/outlined_text_input_author">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:paddingStart="16dp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--Caja del TextInput para description-->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/outlined_text_area_description"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/description"
+                android:paddingTop="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/outlined_text_input_title"
+                app:layout_constraintStart_toStartOf="@id/outlined_text_input_title"
+                app:layout_constraintTop_toBottomOf="@+id/outlined_text_input_title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:lines="6"
+                    android:overScrollMode="always"
+                    android:paddingStart="16dp"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="false" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--  Contenedor de los botones para aceptar o cancelar -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/spacer_50dp"
+                android:orientation="horizontal"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintEnd_toEndOf="@+id/outlined_text_area_description"
+                app:layout_constraintStart_toStartOf="@+id/outlined_text_area_description"
+                app:layout_constraintTop_toBottomOf="@+id/outlined_text_area_description">
+
+                <!--Botón de cancelar -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/cancel_button"
+                    style="@style/PixelBloomCancelButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:soundEffectsEnabled="true" />
+
+                <!--Botón de confirmar -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/ok_button"
+                    style="@style/PixelBloomConfirmButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_weight="1"
+                    android:soundEffectsEnabled="true" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/neutral_50">
+    <!--Contenedor para el texto y la imagen de la transición a los retos-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--Frase 1 en negro -->
+        <TextView
+            android:id="@+id/user_message1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/inconsolata_black"
+            android:gravity="center"
+            android:text="Your challenge begins now!"
+            android:textColor="@color/neutral_700"
+            android:textSize="30sp" />
+        <!--Frase 2 en morado-->
+        <TextView
+            android:id="@+id/user_message2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/inconsolata_black"
+            android:gravity="center"
+            android:text="Ready to create?"
+            android:textColor="@color/purple"
+            android:textSize="30sp" />
+
+        <!-- Imagen que acompaña el texto -->
+        <ImageView
+            android:id="@+id/transition_img"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:contentDescription="Transition image"
+            android:src="@drawable/transition_img" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/neutral_50"
+    android:padding="10dp"
+    tools:context=".view.fragment.onBoarding.OnboardingPagesFragment">
+    <!--Contenedor principal-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/lets_go_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <!--Contenedor para insertar la imagen del onBoarding-->
+        <ImageView
+            android:id="@+id/image_onboarding"
+            android:layout_width="320sp"
+            android:layout_height="300dp"
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_challenge_img" />
+        <!--Contenedor para título, nombre de la app y descripción -->
+        <LinearLayout
+            android:id="@+id/text_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="60dp">
+            <!-- Titulo para el Onboarding -->
+            <TextView
+                android:id="@+id/onboarding_title"
+                style="@style/PixelBloomOnboardingTitle"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Title" />
+            <!-- Nombre de la app que solo sale en la primera pagina -->
+            <TextView
+                android:id="@+id/app_name_subtitle"
+                style="@style/PixelBloomOnboardingAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pixel Bloom" />
+            <!-- Descripcion  -->
+            <TextView
+                android:id="@+id/description"
+                style="@style/PixelBloomOnboardingDescription"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="@string/onboarding_desc_1" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--Botón que aparecerá en la última página para pasar a la pantalla de logeo y registro -->
+    <Button
+        android:id="@+id/lets_go_button"
+        style="@style/PixelBloomButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:soundEffectsEnabled="true"
+        android:text="@string/let_s_go"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

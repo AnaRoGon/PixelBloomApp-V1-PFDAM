@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.feed.FeedFragment">
+
+    <!-- Contenedor del listado de referencias del feed -->
+    <!--Se añade un padding inferior al contenedor padre para que funcione bien el scroll con la transparencia del menu inferior -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_feed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingTop="25dp"
+        android:paddingBottom="90dp" />
+
+    <!-- Botón que sólo aparecerá disponible a los usuarios con rol 'admin' -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_reference_floating_button"
+        style="@style/PixelBloomFloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:soundEffectsEnabled="true"
+        android:contentDescription="@string/cd_add_reference_fab"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

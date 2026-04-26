@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.feed.FeedFragment">
+
+    <!-- Indicador de carga -->
+    <ProgressBar
+        android:id="@+id/loading_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"/>
+
+    <!--Textos para mostrar cuando el user no tiene ningún tablero añadido aún -->
+    <TextView
+        android:id="@+id/user_message1"
+        style="@style/PixelBloomBoardMessage1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/nothing_to_see"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/user_message2"
+        style="@style/PixelBloomBoardMessage2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_first_bloom"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/user_message1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <!-- Imagen que acompaña el texto -->
+    <ImageView
+        android:id="@+id/no_blooms_img"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/no_blooms_img"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/user_message2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <!-- Contenedor del listado de imagenes almacenadas en el board -->
+    <!--Se añade un padding inferior al contenedor padre para que funcione bien el scroll con la transparencia del menu inferior -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_board_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="20dp"
+        android:paddingBottom="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

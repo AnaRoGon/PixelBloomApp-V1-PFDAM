@@ -1,0 +1,52 @@
+[
+  {
+    "ref01": {
+      "title": "Snowbound",
+      "author": "Gemini AI",
+      "description": "Pixel art winter landscape featuring a solitary house atop a snowy mountain, shown in isometric perspective against a flat blue-toned background",
+      "imagePath": "gs://pixel-bloom-8fb13.firebasestorage.app/references/ref01.png",
+      "favorites": 19,
+      "createdAt": "2025-11-24T11:22:00"
+    },
+    "ref02": {
+      "title": "Timeless Girl",
+      "author": "Gemini AI",
+      "description": "Pixel art illustration of a pink-haired girl inspired by 1950s–60s anime aesthetics, drawn in a Ligne Claire style",
+      "imagePath": "gs://pixel-bloom-8fb13.firebasestorage.app/references/ref02.png",
+      "favorites": 7,
+      "createdAt": "2025-11-24T11:25:00"
+    },
+    "ref03": {
+      "title": "Calm at sunset",
+      "author": "Gemini AI",
+      "description": "Image of a small Japanese-style house in pixel art. Isometric perspective. A warm-toned palette that evokes a sunset",
+      "imagePath": "gs://pixel-bloom-8fb13.firebasestorage.app/references/ref03.png",
+      "favorites": 3,
+      "createdAt": "2025-11-26T11:59:00"
+    },
+    "ref04": {
+      "title": "Calm at sunset",
+      "author": "Gemini AI",
+      "description": "Image of a small Japanese-style house in pixel art. Isometric perspective. A warm-toned palette that evokes a sunset",
+      "imagePath": "gs://pixel-bloom-8fb13.firebasestorage.app/references/ref03.png",
+      "favorites": 3,
+      "createdAt": "2025-11-26T11:59:00"
+    },
+    "ref05": {
+      "title": "Calm at sunset",
+      "author": "Gemini AI",
+      "description": "Image of a small Japanese-style house in pixel art. Isometric perspective. A warm-toned palette that evokes a sunset",
+      "imagePath": "gs://pixel-bloom-8fb13.firebasestorage.app/references/ref03.png",
+      "favorites": 3,
+      "createdAt": "2025-11-26T11:59:00"
+    },
+    "ref06": {
+      "title": "Calm at sunset",
+      "author": "Gemini AI",
+      "description": "Image of a small Japanese-style house in pixel art. Isometric perspective. A warm-toned palette that evokes a sunset",
+      "imagePath": "gs://pixel-bloom-8fb13.firebasestorage.app/references/ref03.png",
+      "favorites": 3,
+      "createdAt": "2025-11-26T11:59:00"
+    }
+  }
+]

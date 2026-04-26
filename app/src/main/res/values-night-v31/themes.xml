@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.Pixelbloom" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/purple</item>
+        <item name="colorSecondary">@color/orange</item>
+        <item name="colorTertiary">@color/light_purple</item>
+
+        <!--        Tipografía base para la app-->
+        <item name="android:fontFamily">@font/inconsolata_regular</item>
+        <!--        Estilo para la barra de navegación -->
+        <item name="bottomNavigationStyle">@style/PixelBloomBottomNavigation</item>
+        <!--        Estilo para los campos de texto de toda la app -->
+        <item name="textInputStyle">@style/PixelBloomTextInput</item>
+        <!--        Estilo para los alert dialog de toda la app-->
+        <item name="materialAlertDialogTheme">@style/PixelBloomAlertDialogTheme</item>
+        <item name="android:windowBackground">@color/neutral_50</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="Theme.Pixelbloom" parent="Base.Theme.Pixelbloom" />
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher_round</item>
+        <item name="android:windowSplashScreenBackground">#BBA9D4</item>
+        <item name="android:windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/Theme.Pixelbloom</item>
+    </style>
+</resources>

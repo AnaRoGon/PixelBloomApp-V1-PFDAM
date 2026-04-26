@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?><!--El contenedor principal es un ScrollView para poder hacer scroll si el contenido es muy largo-->
+<!--Se añade un padding inferior al contenedor padre para que funcione bien el scroll -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:paddingBottom="120dp"
+    tools:context=".view.fragment.feed.FeedDetailsFragment">
+    <!--Contenedor principal para que funcione correctamente el NestedScroll -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- CardView que contiene la imagen del board -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:elevation="6dp"
+            app:cardBackgroundColor="@color/neutral_50"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/feed_details_image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ref01"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+        <!--Contenedor para organizar los botones de eliminar y mover referencia -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/icon_num_buttom_container"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/image_card_view"
+            app:layout_constraintStart_toStartOf="@+id/image_card_view"
+            app:layout_constraintTop_toBottomOf="@+id/image_card_view">
+
+            <!-- Botón para eliminar imagen del board -->
+            <ImageButton
+                android:id="@+id/delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/transparent"
+                android:contentDescription="@string/cd_delete_reference"
+                android:paddingEnd="20dp"
+                android:soundEffectsEnabled="true"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/split_button"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Split buttom para cambiar referencias guardadas entre tableros -->
+            <com.google.android.material.button.MaterialSplitButton
+                android:id="@+id/split_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/confirm_save_button"
+                    style="@style/PixelBloom.SplitButton.Leading"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/inconsolata_black"
+                    android:maxLines="1"
+                    android:soundEffectsEnabled="true"
+                    android:text="@string/board_name"
+                    android:textColor="@color/neutral_50"
+                    app:icon="@drawable/ic_confirm" />
+                <!-- Botón que tenía una animación predeterminada cuando se pulsaba -->
+                <!-- Esta animación se ha eliminado ya que se abre un dialog y mantenerla era incoherente visualmente -->
+                <Button
+                    android:id="@+id/boards_options"
+                    style="@style/PixelBloom.SplitButton.Trailing"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/split_button"
+                    android:soundEffectsEnabled="true"
+                    app:icon="@drawable/m3_split_button_chevron_avd"
+                    app:toggleCheckedStateOnClick="false" />
+            </com.google.android.material.button.MaterialSplitButton>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Contenedor para organizar el título y la descripción de la imagen-->
+        <LinearLayout
+            android:id="@+id/title_description_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/icon_num_buttom_container"
+            app:layout_constraintStart_toStartOf="@+id/icon_num_buttom_container"
+            app:layout_constraintTop_toBottomOf="@+id/icon_num_buttom_container">
+
+            <!--Título de la imagen-->
+            <TextView
+                android:id="@+id/image_details_title"
+                style="@style/PixelBloomTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/default_image_title" />
+            <!--Autor de la imagen-->
+            <TextView
+                android:id="@+id/image_details_author"
+                style="@style/PixelBloomSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/default_image_author" />
+
+            <!--Descripción de la imagen-->
+            <TextView
+                android:id="@+id/image_details_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp"
+                android:text="@string/default_image_desc" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

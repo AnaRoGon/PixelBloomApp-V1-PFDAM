@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/neutral_50"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Barra estética de arrastre -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="@color/neutral_300" />
+    <!--Título del selector de idiomas-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/inconsolata_black"
+        android:text="@string/language"
+        android:textColor="@color/neutral_700"
+        android:textSize="20sp" />
+    <!--Contenedor para idioma e icono -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <!--Icono para el idioma en español -->
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/cd_spanish_lang_icon"
+            android:src="@drawable/ic_spanish" />
+
+        <!-- Botón para seleccionar Español -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_spanish"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="start|center_vertical"
+            android:soundEffectsEnabled="true"
+            android:text="@string/spanish_lang"
+            android:textColor="@color/neutral_700"
+            android:textSize="16sp" />
+    </LinearLayout>
+    <!--Contenedor para idioma e icono -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <!--Icono para el idioma en inglés -->
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="@string/cd_english_lang_icon"
+            android:src="@drawable/ic_english" />
+        <!-- Botón para la seleccionar Inglés -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_english"
+            style="@style/Widget.Material3.Button.TextButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:gravity="start|center_vertical"
+            android:soundEffectsEnabled="true"
+            android:text="@string/english_lang"
+            android:textColor="@color/neutral_700"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+</LinearLayout>

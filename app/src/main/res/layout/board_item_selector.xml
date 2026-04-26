@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/neutral_50"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="12dp">
+
+    <!-- CardView para la previsualización de la imagen del tablero (estilo Pinterest) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_preview_selector"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:cardCornerRadius="12dp"
+        android:soundEffectsEnabled="true"
+        android:background="@color/neutral_50"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_board_preview_selector"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="cardView en miniatura"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_reference_image" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Contenedor del item del tableo  -->
+    <TextView
+        android:id="@+id/text_board_title_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inconsolata_regular"
+        android:textColor="@color/neutral_900"
+        android:textSize="20sp"
+        android:paddingStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/card_preview_selector"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Board title" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

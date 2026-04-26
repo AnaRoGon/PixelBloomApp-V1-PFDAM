@@ -1,0 +1,29 @@
+[
+  {
+    "createdAt": "1",
+    "description": "Challenge 01",
+    "id": "u1",
+    "isComplete": false,
+    "palette": [],
+    "title": "Challenge 01",
+    "userImagePath": ""
+  },
+  {
+    "createdAt": "2",
+    "description": "Challenge 02",
+    "id": "u2",
+    "isComplete": true,
+    "palette": [],
+    "title": "Challenge 02",
+    "userImagePath": ""
+  },
+  {
+    "createdAt": "3",
+    "description": "Challenge 03",
+    "id": "u3",
+    "isComplete": false,
+    "palette": [],
+    "title": "Challenge 03",
+    "userImagePath": ""
+  }
+]

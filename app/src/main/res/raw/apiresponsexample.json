@@ -1,0 +1,131 @@
+[
+  {
+    "id": "671fd5edab6cc866507fe7cf",
+    "colors": [
+      "#44562f",
+      "#83934d",
+      "#b7c88d",
+      "#e9dfb4",
+      "#efbfb3"
+    ],
+    "tags": [
+      "earthy",
+      "olive",
+      "green",
+      "khaki",
+      "beige",
+      "pastel",
+      "soft",
+      "muted",
+      "neutral",
+      "warm"
+    ],
+    "text": "Florest Moth",
+    "likesCount": 454,
+    "normalizedHash": "a2ff2c8e68ef3cf69ee27ded00c4ad5e7d5deed82b05688f3976801b960482ea",
+    "createdAt": "2024-10-28T18:20:29.406Z"
+  },
+  {
+    "id": "6719c99b71d46152958e0184",
+    "colors": [
+      "#a8e6cf",
+      "#ddedc4",
+      "#ffd4b8",
+      "#ffadad",
+      "#ff667d"
+    ],
+    "tags": [
+      "mint",
+      "green",
+      "pastel",
+      "bright",
+      "spring",
+      "summer",
+      "soft",
+      "pink",
+      "coral"
+    ],
+    "text": "Mint Marrow",
+    "likesCount": 236,
+    "normalizedHash": "4a04c7b30c44aab2539863c721b7a4459eee73af0be6900bb4e2673829559457",
+    "createdAt": "2024-10-24T04:14:19.040Z"
+  },
+  {
+    "id": "671bb71753d1e2a13ca7dd9a",
+    "colors": [
+      "#f6e48e",
+      "#f8c391",
+      "#f67481",
+      "#c06d84",
+      "#6c5b80"
+    ],
+    "tags": [
+      "yellow",
+      "bright",
+      "playful",
+      "soft",
+      "spring",
+      "fun",
+      "light",
+      "pink",
+      "purple",
+      "green"
+    ],
+    "text": "Duck",
+    "likesCount": 217,
+    "normalizedHash": "66d249bcbce8baec4b4de29812b84692c95286f2ee8e2a7b35de1cf99e2449ae",
+    "createdAt": "2024-10-25T15:19:51.245Z"
+  },
+  {
+    "id": "671e302278430c6ffa4016a7",
+    "colors": [
+      "#3b7e9b",
+      "#5cb2af",
+      "#7dd8c3",
+      "#fbd7a7",
+      "#f76e6e"
+    ],
+    "tags": [
+      "aesthetic",
+      "blue",
+      "bright",
+      "coral",
+      "cream",
+      "green",
+      "spring",
+      "tropical",
+      "vibrant",
+      "yellow"
+    ],
+    "text": "Ayato",
+    "likesCount": 210,
+    "normalizedHash": "a8b9df57fd168fa165f6e14bcb22b3b28d2034a1d751a6299bae95729c4f8933",
+    "createdAt": "2024-10-27T12:20:50.194Z"
+  },
+  {
+    "id": "67112ce28a94ad4499079aeb",
+    "colors": [
+      "#895b29",
+      "#c19b6c",
+      "#e3d8b5",
+      "#a1b5a1",
+      "#4e2c2e"
+    ],
+    "tags": [
+      "vintage",
+      "brown",
+      "beige",
+      "green",
+      "muted",
+      "earthy",
+      "soft",
+      "cream",
+      "terracotta",
+      "olive"
+    ],
+    "text": "Vintage Home",
+    "likesCount": 199,
+    "normalizedHash": "f6a83e65e4d88eb6069e3393ffe877d64b33d08255a942a3625252da5ca79d2c",
+    "createdAt": "2024-10-17T15:27:30.702Z"
+  }
+]

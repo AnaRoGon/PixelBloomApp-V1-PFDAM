@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/feedFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_home"
+        android:title="@string/feed" />
+    <item
+        android:id="@+id/boardsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_boards"
+        android:title="@string/boards" />
+
+    <item
+        android:id="@+id/challengesFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_challenges"
+        android:title="@string/challenges" />
+
+</menu>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="white_transparent_95">#F2FFFFFF</color>
+    <color name="neutral_transparent_80">#CC3D3D3D</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="neutral_50">#FBFBFB</color>
+    <color name="neutral_100">#EFEFEF</color>
+    <color name="neutral_200">#DCDCDC</color>
+    <color name="neutral_300">#BDBDBD</color>
+    <color name="neutral_400">#989898</color>
+    <color name="neutral_500">#7C7C7C</color>
+    <color name="neutral_600">#656565</color>
+    <color name="neutral_700">#525252</color>
+    <color name="neutral_800">#464646</color>
+    <color name="neutral_900">#3D3D3D</color>
+    <color name="neutral_l_d_mode">#3D3D3D</color>
+    <color name="black">#FF000000</color>
+
+    <!-- Colores principales -->
+    <color name="purple">#A07BC1</color>
+    <color name="purple_transparent_80">#80A07BC1</color>
+    <color name="light_purple">#BBA9D4</color>
+
+    <!-- Colores secundarios -->
+    <color name="inactive_blue">#B9D4DC</color>
+    <color name="banana_light">#F6E0AD</color>
+    <color name="orange">#E2B693</color>
+    <color name="dirty_orange">#C69D8E</color>
+
+
+    <!-- Adaptación de color para el modo oscuro -->
+<color name="dark_blue">#0d2d50</color>
+
+</resources>

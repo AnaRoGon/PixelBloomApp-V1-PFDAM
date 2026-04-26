@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/settings_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    tools:context=".view.fragment.SettingsFragment">
+
+    <!-- Fondo oscuro semitransparente para quitar peso visual al fragment que queda atrás -->
+    <View
+        android:id="@+id/background_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/neutral_transparent_80"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Toolbar personalizada para ir atrás cuando se abre este dialogo -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/neutral_50"
+        android:elevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back_arrow"
+        app:title="@string/settings" />
+
+    <!-- CardView como contenedor de la cabecera personalizada y las opciones del menú-->
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/settings_toolbar"
+        app:layout_constraintWidth_percent="0.65">
+
+        <!-- Organizador de los elementos que contiene el Cardview -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="start"
+            android:orientation="vertical"
+            app:layout_constraintWidth_percent="0.70">
+
+            <!-- Cabecera con el logotipo de la app -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/cd_settings_app_logo"
+                android:scaleType="fitXY"
+                android:src="@drawable/settings_img" />
+
+            <!--  Botón para cambiar el idioma -->
+            <Button
+                android:id="@+id/language_button"
+                style="@style/PixelBloomIconTextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:soundEffectsEnabled="true"
+                android:text="@string/language"
+                app:icon="@drawable/ic_language" />
+
+            <!--  Contenedor para los elementos del Switch para el tema de la app -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <!-- Icono para el modo -->
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/cd_mode_icon"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="8dp"
+                    android:src="@drawable/ic_mode" />
+                <!-- Texto informativo -->
+                <TextView
+                    android:id="@+id/mode_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inconsolata_black"
+                    android:text="@string/dark_mode"
+                    android:textColor="@color/neutral_700" />
+                <!-- Switch para cambiar el modo -->
+                <com.google.android.material.materialswitch.MaterialSwitch
+                    android:id="@+id/switch_app_mode"
+                    style="@style/PixelBloomSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:paddingStart="15dp"
+                    android:soundEffectsEnabled="true" />
+
+            </LinearLayout>
+            <!--  Botón about -->
+            <Button
+                android:id="@+id/about_button"
+                style="@style/PixelBloomIconTextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:soundEffectsEnabled="true"
+                android:text="@string/about"
+                app:icon="@drawable/ic_info" />
+            <!--  Botón de log out -->
+            <Button
+                android:id="@+id/log_out_button"
+                style="@style/PixelBloomIconTextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:soundEffectsEnabled="true"
+                android:text="@string/log_out"
+                app:icon="@drawable/ic_logout" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

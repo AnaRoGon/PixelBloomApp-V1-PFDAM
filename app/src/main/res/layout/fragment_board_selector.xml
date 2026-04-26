@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/neutral_50"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Barra estética de arrastre -->
+        <View
+            android:layout_width="40dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:background="@color/neutral_300" />
+        <!--Título del selector de tableros-->
+        <TextView
+            android:id="@+id/title_board_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inconsolata_black"
+            android:text="@string/save_to_board"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent" />
+        <!--RecyclerView para mostrar los tableros guardados-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_boards_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:maxHeight="300dp"
+            android:minHeight="100dp"
+            app:layout_constraintTop_toBottomOf="@id/title_board_selector" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_create_board"
+            style="@style/PixelBloomButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/btn_orange_pixel_bloom_color"
+            android:soundEffectsEnabled="true"
+            android:text="@string/create_new_board"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recycler_view_boards_selector" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

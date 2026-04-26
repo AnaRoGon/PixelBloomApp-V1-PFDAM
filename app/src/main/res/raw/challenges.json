@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Home... sweet home",
+    "description": "The wood crackled in the fire as the sun went to sleep outside.",
+    "palette": [
+      "#FCC724",
+      "#9F7607",
+      "#F27C11",
+      "#DA786E",
+      "#751D29"
+    ],
+    "createdAt": "2025-11-24T12:22:00"
+  },
+  {
+    "title": "Like a cat",
+    "description": "Eat rainbow treats and purr like a happy cat",
+    "palette": [
+      "#F1A8A2",
+      "#F1C5A7",
+      "#F1E1A7",
+      "#A7D3F1",
+      "#A8A2F1"
+    ],
+    "createdAt": "2025-11-27T11:22:00"
+  },
+  {
+    "title": "Croaking",
+    "description": "In the pitch-black silence, purple echoes map a path for those who dare to leap.",
+    "palette": [
+      "#222222",
+      "#6E4E8D",
+      "#9B79B9",
+      "#F3A0C0",
+      "#FCDFD4"
+    ],
+    "createdAt": "2025-11-27T13:22:00"
+  }
+]

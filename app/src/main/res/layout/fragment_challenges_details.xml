@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?><!-- El contenedor principal es un ScrollView para poder hacer scroll si el contenido es muy largo -->
+<!-- Se añade un padding inferior al contenedor padre para que funcione bien el scroll -->
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:paddingBottom="120dp"
+    tools:context=".view.fragment.boards.ChallengesDetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Botón para confirmar reto completado -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/complete_challenge_floating_button"
+            style="@style/PixelBloomFloatingButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/cd_add_reference_fab"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/image_card_view"
+            app:layout_constraintTop_toTopOf="@+id/image_card_view"
+            tools:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/linear_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!--Frase estática para informar al user sobre el estado del reto-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/this_challenge_is"
+                android:textSize="20dp" />
+            <!--Estado del reto-->
+            <TextView
+                android:id="@+id/challenge_state_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inconsolata_black"
+                android:paddingStart="10dp"
+                android:text="@string/incomplete"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <!-- CardView que contiene una imagen por defecto o la imagen del challenge -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/image_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:elevation="8dp"
+            app:cardBackgroundColor="@color/neutral_50"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linear_layout"
+            app:strokeColor="@color/black"
+            app:strokeWidth="3dp">
+
+            <ImageView
+                android:id="@+id/user_challenge_image"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_challenge_img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Progress Indicator para mostrar el estado del reto -->
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/upload_progress_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            app:indicatorColor="@color/orange"
+            app:layout_constraintBottom_toBottomOf="@+id/image_card_view"
+            app:layout_constraintEnd_toEndOf="@+id/image_card_view"
+            app:layout_constraintStart_toStartOf="@+id/image_card_view"
+            app:layout_constraintTop_toTopOf="@+id/image_card_view" />
+
+        <!--  Contenedor para las opciones para un challenge -->
+        <LinearLayout
+            android:id="@+id/challenge_options_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/transparent"
+            android:divider="@drawable/spacer_25dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:showDividers="middle"
+            app:layout_constraintEnd_toEndOf="@+id/image_card_view"
+            app:layout_constraintStart_toStartOf="@+id/image_card_view"
+            app:layout_constraintTop_toBottomOf="@+id/image_card_view">
+
+            <ImageButton
+                android:id="@+id/delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/transparent"
+                android:contentDescription="@string/cd_delete_reference"
+                android:soundEffectsEnabled="true"
+                android:src="@drawable/ic_delete" />
+
+            <ImageButton
+                android:id="@+id/edit_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/transparent"
+                android:contentDescription="@string/cd_edit_reference"
+                android:soundEffectsEnabled="true"
+                android:src="@drawable/ic_edit" />
+
+            <!-- Botón para agregar una imagen a un challenge y completarlo-->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/add_img"
+                style="@style/PixelBloomButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/btn_orange_pixel_bloom_color"
+                android:soundEffectsEnabled="true"
+                android:text="@string/add_image" />
+
+        </LinearLayout>
+
+        <!--CardView de paleta de colores del challenge seleccionado -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/challenge_palette_container"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="10dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="@+id/challenge_options_container"
+            app:layout_constraintStart_toStartOf="@+id/challenge_options_container"
+            app:layout_constraintTop_toBottomOf="@+id/challenge_options_container"
+            app:strokeColor="@color/black"
+            app:strokeWidth="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/neutral_50"
+
+                android:orientation="vertical"
+                android:paddingStart="25dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="25dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/challenge_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:fontFamily="@font/inconsolata_black"
+                    android:paddingBottom="10dp"
+                    android:text="@string/palette_challenge"
+                    android:textSize="17sp" />
+
+                <LinearLayout
+                    android:id="@+id/palette_container"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/hex_01"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:background="@color/dirty_orange"
+                        android:contentDescription="@string/first_color" />
+
+                    <ImageView
+                        android:id="@+id/hex_02"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:background="@color/orange"
+                        android:contentDescription="@string/second_color" />
+
+                    <ImageView
+                        android:id="@+id/hex_03"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:background="@color/inactive_blue"
+                        android:contentDescription="@string/third_color" />
+
+                    <ImageView
+                        android:id="@+id/hex_04"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:background="@color/light_purple"
+                        android:contentDescription="@string/fourth_color" />
+
+                    <ImageView
+                        android:id="@+id/hex_05"
+                        android:layout_width="0dp"
+                        android:layout_height="60dp"
+                        android:layout_weight="1"
+                        android:background="@color/purple"
+                        android:contentDescription="@string/fifth_color" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- CardView que contiene una imagen por defecto o la imagen del challenge -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/challenge_description_card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:elevation="8dp"
+            app:cardBackgroundColor="@color/banana_light"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/challenge_palette_container"
+            app:strokeColor="@color/black"
+            app:strokeWidth="3dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inconsolata_black"
+                    android:gravity="start"
+                    android:padding="15dp"
+                    android:text="@string/your_inspiration"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/user_challenge_description"
+                    android:layout_width="350dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/inconsolata_black"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/default_challenge_desc"
+                    android:textColor="@color/neutral_900"
+                    android:textSize="17dp" />
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

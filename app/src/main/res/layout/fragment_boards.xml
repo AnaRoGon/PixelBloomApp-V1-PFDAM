@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.boards.BoardsFragment">
+
+    <!-- Mensaje para administradores que no tienen disponible esta sección -->
+    <TextView
+        android:id="@+id/admin_message"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:fontFamily="@font/inconsolata_black"
+        android:gravity="center"
+        android:text="@string/admin_exclusive_section"
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Botón para añadir un nuevo board -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/create_new_board_floating_button"
+        style="@style/PixelBloomFloatingButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:contentDescription="@string/floating_button_to_create_a_new_board"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--Textos para mostrar cuando el user no tiene ningún tablero añadido aún -->
+    <TextView
+        android:id="@+id/user_message1"
+        style="@style/PixelBloomBoardMessage1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/status_404_blooms_not_found"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/user_message2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/user_message2"
+        style="@style/PixelBloomBoardMessage2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/add_first_board"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/no_board_img"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <!-- Imagen que acompaña el texto -->
+    <ImageView
+        android:id="@+id/no_board_img"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/no_boards_img"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_challenges_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible" />
+
+    <!-- El RecyclerView de Boards del usuario-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_boards"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="25dp"
+        android:paddingBottom="10dp"
+        android:soundEffectsEnabled="true"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_challenges_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--COntenedor de la sección de retos del usuario-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottom_challenges_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/neutral_200"
+        android:paddingBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.4"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- Titulos de challenges del usuario -->
+        <TextView
+            android:id="@+id/carousel_title"
+            style="@style/PixelBloomCarouselTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/my_challenges"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- Imagen que se mostrará cuando el usuario no tenga retos añadidos -->
+        <ImageView
+            android:id="@+id/no_user_chall_img1"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="20dp"
+            android:contentDescription="@string/not_user_chal_img"
+            android:src="@drawable/not_chall_img"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/user_message3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/user_message3"
+            tools:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/no_user_chall_img2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="20dp"
+            android:contentDescription="@string/not_user_chal_img"
+            android:scaleX="-1"
+            android:src="@drawable/not_chall_img2"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/user_message3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/user_message3"
+            tools:visibility="visible" />
+
+        <!-- Texto oculto para mostrar cuando el usuario no tiene retos añadidos-->
+        <TextView
+            android:id="@+id/user_message3"
+            style="@style/PixelBloomBoardMessage3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/add_pollem_challenge"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/carousel_recycler_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/carousel_recycler_view"
+            tools:visibility="visible" />
+        <!-- RecyclerView para el carousel de los retos del usuario -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/carousel_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/carousel_title" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
