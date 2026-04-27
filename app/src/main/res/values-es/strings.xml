@@ -135,7 +135,7 @@
     <string name="error_too_many_requests">Acceso bloqueado temporalmente por demasiados intentos. Inténtalo más tarde.</string>
     <string name="error_network_request_failed">Error de conexión de red</string>
     <string name="error_generic_operation">Error en la operación.</string>
-    <string name="error_permission_denied">Permiso denegado. Tu sesión podría haber expirado.</string>
+    <string name="error_permission_denied">Se ha cerrado la sesión.</string>
     <string name="date_format_pattern">d \'de\' MMMM \'de\' yyyy</string>
     <string name="board_prefix">Tablero: %1$s</string>
     <string name="challenge_prefix">Reto: %1$s</string>

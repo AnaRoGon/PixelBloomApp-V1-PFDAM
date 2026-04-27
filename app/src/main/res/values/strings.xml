@@ -134,7 +134,7 @@
     <string name="error_too_many_requests">Access temporarily blocked due to too many attempts. Try again later</string>
     <string name="error_network_request_failed">Network connection error</string>
     <string name="error_generic_operation">Error in operation</string>
-    <string name="error_permission_denied">Permission denied. Your session may have expired.</string>
+    <string name="error_permission_denied">Your session has ended.</string>
     <string name="date_format_pattern">MMMM dd, yyyy</string>
     <string name="board_prefix">Board: %1$s</string>
     <string name="challenge_prefix">Challenge: %1$s</string>
