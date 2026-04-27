@@ -3,27 +3,27 @@ Se trata de una aplicación donde los usuarios pueden encontrar inspiración en 
 
 # Características principales
 
-## Autenticación de Usuarios
+## Pantalla de Autenticación de Usuarios
 Desde esta pantalla los usuarios pueden registrarse e iniciar sesión de forma segura. La aplicación mantiene la sesión activa para facilitar el acceso rápido.
 
 <img width="270" height="600" alt="00" src="https://github.com/user-attachments/assets/2093a7f5-f1c6-4e24-ae8d-b5e55f1e2523" />
 
-## Feed de Inspiración
+## Pantalla de Feed de Inspiración
 Desde esta pantalla los usuarios pueden explorar un feed constante de nuevas referencias e ideas de Pixel Art. Descubrir estilos y temáticas diferentes para nutrir su creatividad. 
 
 <img width="270" height="600" alt="01" src="https://github.com/user-attachments/assets/72c7ba86-f53c-4fe3-8378-46df339f64f9" />
 
-## Detalles de una Referencia
+## Pantalla de Detalles de una Referencia
 Al seleccionar una referencia, podrás ver sus detalles completos y guardarla en tus propios tableros.
 
 <img width="270" height="600" alt="05" src="https://github.com/user-attachments/assets/5e3b9d22-a3c2-4194-8990-63eec54ea923" />
 
-## Tableros Personalizados y retos del usuario
+## Pantalla de tableros y retos del usuario
 Desde aquí el usuario puede crear, organizar y gestionar tus propios tableros. Se podrán tener organizadas las referencias favoritas del feed o el historial de retos completados. 
 
 <img width="270" height="600" alt="02" src="https://github.com/user-attachments/assets/4f88f0db-5fe5-4bef-8559-8df8ed05c57b" />
 
-## Detalles de un reto de usuario
+## Pantalla de detalles de retos de usuario
 Al seleccionar un reto podrá acceder al detalle del mismo y completarlo. Una vez completado el usuario podrá acceder siempre que quiera a visualizarlo o editarlo.
 
 <img width="270" height="600" alt="06" src="https://github.com/user-attachments/assets/8969f0dd-430e-45ba-b237-933c89ca3a6a" />
@@ -32,12 +32,12 @@ Si el reto no está completado la pantalla mostrará una imagen por defecto e in
 
 <img width="270" height="600" alt="07" src="https://github.com/user-attachments/assets/471190d1-964a-44c5-8210-1f71c3867ee2" />
 
-## Paletas de Colores Generativas
-Para ayudar a los usuarios sus creaciones, la aplicación incluye una sección de retos diarios/semanales. Esta sección les permite acceder a una serie de propuestas inspiradoras para crear nuevos proyectos de Pixel Art.
+## Pantalla para aceptar un reto semanal
+Para ayudar a los usuarios sus creaciones, la aplicación incluye una sección de retos semanales. Esta sección les permite acceder a una serie de propuestas inspiradoras para crear nuevos proyectos de Pixel Art.
 
 <img width="270" height="600" alt="03" src="https://github.com/user-attachments/assets/0ac625b0-7c38-42e9-9ba3-e123a6c2564d" />
 
-## Ajustes y Personalización
+## Menú de ajustes
 Desde el menú de ajustes se podrá editar el tema de la aplicación, idioma, acceder a la información del desarrollador de la app y cerrar la sesión.
 
 <img width="270" height="600" alt="04" src="https://github.com/user-attachments/assets/c7e86980-278f-414b-9948-5ecd82163fa0" />
