@@ -6,7 +6,7 @@ Se trata de una aplicación donde los usuarios pueden encontrar inspiración en 
 ## Autenticación de Usuarios
 Desde esta pantalla los usuarios pueden registrarse e iniciar sesión de forma segura. La aplicación mantiene la sesión activa para facilitar el acceso rápido.
 
-![00]("https://github.com/user-attachments/assets/cab0fe38-146f-42c5-8b79-276508eb81f1")
+<img width="1080" height="2400" alt="00" src="https://github.com/user-attachments/assets/2093a7f5-f1c6-4e24-ae8d-b5e55f1e2523" />
 
 ## Feed de Inspiración
 Desde esta pantalla los usuarios pueden explorar un feed constante de nuevas referencias e ideas de Pixel Art. Descubrir estilos y temáticas diferentes para nutrir su creatividad. 
