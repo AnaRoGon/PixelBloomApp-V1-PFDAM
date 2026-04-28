@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--    Traducciones en español de la app -->
-    <string name="app_name">pixelbloom</string>
+    <string name="app_name">PixelBloom</string>
     <string name="let_s_go">¡Vamos allá!</string>
     <string name="feed">Librería</string>
     <string name="boards">Tableros</string>

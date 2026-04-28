@@ -1,6 +1,6 @@
 <resources>
     <!--  Traducciones en inglés de la app -->
-    <string name="app_name">pixelbloom</string>
+    <string name="app_name">PixelBloom</string>
     <string name="let_s_go">Let\'s go!</string>
     <string name="feed">Feed</string>
     <string name="boards">Boards</string>
