@@ -7,15 +7,15 @@ Al ejecutar la aplicación por primera vez el usuario tendrá un onBoarding para
 
 <img width="270" height="600" alt="09" src="https://github.com/user-attachments/assets/70fbbc86-6128-4bae-af9d-5786c671276e" />
 
-## Guía interactiva
-Una vez se registre o inicie sesión por primera vez se ejecutará una guía interactiva
-
-<img width="270" height="600" alt="10" src="https://github.com/user-attachments/assets/8dfb17b9-5fc6-42a9-b915-63f6af7de4b9" />
-
 ## Pantalla de Autenticación de Usuarios
 Desde esta pantalla los usuarios pueden registrarse e iniciar sesión de forma segura. La aplicación mantiene la sesión activa para facilitar el acceso rápido.
 
 <img width="270" height="600" alt="00" src="https://github.com/user-attachments/assets/2093a7f5-f1c6-4e24-ae8d-b5e55f1e2523" />
+
+## Guía interactiva
+Una vez se registre o inicie sesión por primera vez se ejecutará una guía interactiva
+
+<img width="270" height="600" alt="10" src="https://github.com/user-attachments/assets/8dfb17b9-5fc6-42a9-b915-63f6af7de4b9" />
 
 ## Pantalla de Feed de Inspiración
 Desde esta pantalla los usuarios pueden explorar un feed constante de nuevas referencias e ideas de Pixel Art. Descubrir estilos y temáticas diferentes para nutrir su creatividad. 
